@@ -14,3 +14,11 @@
  - name: install build tool bazel
    become: yes
    apt: name='bazel' state=latest
+
+ - name: install tensorflow build dependencies
+   apt: name={{ item }} state=latest
+   with_items:
+    - python-numpy
+    - python-dev
+    - python-pip
+    - python-wheel
