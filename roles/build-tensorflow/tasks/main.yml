@@ -1,2 +1,4 @@
 ---
- 
+
+ - name: clone tensorflow repository
+   git: dest=/tmp/tensorflow  repo='https://github.com/tensorflow/tensorflow' version='r1.2'
