@@ -2,3 +2,15 @@
 
  - name: clone tensorflow repository
    git: dest=/tmp/tensorflow  repo='https://github.com/tensorflow/tensorflow' version='r1.2'
+
+ - name: install build tool bazel - add repository
+   become: yes
+   apt_repository: repo="deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8"
+
+ - name: install build tool bazel - add repository key
+   become: yes
+   apt_key: url='https://bazel.build/bazel-release.pub.gpg'
+
+ - name: install build tool bazel
+   become: yes
+   apt: name='bazel' state=latest
