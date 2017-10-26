@@ -3,4 +3,4 @@
 - hosts: all
 
   roles:
-   - build-tensorflow
+   - install-tensorflow-virtualenv

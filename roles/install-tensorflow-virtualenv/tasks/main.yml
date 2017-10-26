@@ -1,0 +1,9 @@
+---
+
+  - name: install python 3 and virtualenv
+    become: true
+    apt: name={{ item }} state=latest
+    with_items:
+      - python3-pip
+      - python3-dev
+      - python-virtualenv
