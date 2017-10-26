@@ -7,3 +7,10 @@
       - python3-pip
       - python3-dev
       - python-virtualenv
+
+  - name: install tensorflow using pip
+    pip:
+      name: tensorflow
+      state: latest
+      virtualenv: "{{ tensorflow_virtualenv_target_path }}"
+      virtualenv_python: python3

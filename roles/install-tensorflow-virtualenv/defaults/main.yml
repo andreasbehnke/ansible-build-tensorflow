@@ -1,0 +1,2 @@
+---
+tensorflow_virtualenv_target_path: "{{ ansible_env.HOME }}/tensorflow"
