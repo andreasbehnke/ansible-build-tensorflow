@@ -2,13 +2,13 @@
 Installs tensor flow, based on this instruction:
 https://www.tensorflow.org/install/install_linux#InstallingVirtualenv
 
-== Specification ==
+### Specification
 
 * installs CPU based implementation
 * for ubuntu or ubuntu based systems
 * phyton 3
 
-== Install using method "virtualenv" ==
+### Install using method "virtualenv"
 Using phyton virtual environment
 
 * configure variables:
@@ -23,5 +23,5 @@ Usage:
 * source code is checked out into folder ~/src/tensorflow using the branch which is
   compatible with the installed tensorflow version
 
-== Install using method "build from sources" ==
+### Install using method "build from sources"
  DO TO BE DONE
