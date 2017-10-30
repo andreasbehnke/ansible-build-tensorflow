@@ -1,7 +1,0 @@
----
-
-- hosts: all
-
-  roles:
-   - install-tensorflow-virtualenv
-   - tensorflow-sources

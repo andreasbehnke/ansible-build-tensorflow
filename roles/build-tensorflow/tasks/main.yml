@@ -11,13 +11,10 @@
    become: yes
    apt_key: url='https://bazel.build/bazel-release.pub.gpg'
 
- - name: install build tool bazel
-   become: yes
-   apt: name='bazel' state=latest
-
  - name: install tensorflow build dependencies
    apt: name={{ item }} state=latest
    with_items:
+    - bazel
     - python-numpy
     - python-dev
     - python-pip
