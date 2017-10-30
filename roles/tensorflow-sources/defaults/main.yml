@@ -1,0 +1,3 @@
+---
+tensorflow_source_path: "{{ ansible_env.HOME }}/src/tensorflow"
+tensorflow_source_branch: "r1.3"

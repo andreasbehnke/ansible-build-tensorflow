@@ -4,3 +4,4 @@
 
   roles:
    - install-tensorflow-virtualenv
+   - tensorflow-sources
