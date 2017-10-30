@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+
+  vars:
+    tensorflow_source_branch: "r1.4"
+
+  roles:
+    - tensorflow-sources
+    - build-tensorflow

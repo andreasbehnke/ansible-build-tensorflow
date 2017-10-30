@@ -1,6 +1,6 @@
 # Install Tensor Flow
 Installs tensor flow, based on this instruction:
-https://www.tensorflow.org/install/install_linux#InstallingVirtualenv
+https://www.tensorflow.org/install/install_linux
 
 ### Specification
 
@@ -9,11 +9,15 @@ https://www.tensorflow.org/install/install_linux#InstallingVirtualenv
 * phyton 3
 
 ### Install using method "virtualenv"
-Using phyton virtual environment
+
+Installing tensorflow using phyton virtual environment:
+
+https://www.tensorflow.org/install/install_linux#InstallingVirtualenv
 
 * configure variables:
+  * tensorflow_source_path defaults to ~/src/tensorflow
   * tensorflow_virtualenv_target_path defaults to ~/tensorflow
-* ansible-playbook tensorflow_virtualenv.yml -l localhost --ask-sudo
+* ansible-playbook tensorflow-virtualenv.yml -l localhost --ask-sudo
 
 Usage:
 
@@ -24,4 +28,14 @@ Usage:
   compatible with the installed tensorflow version
 
 ### Install using method "build from sources"
- DO TO BE DONE
+
+Build tensorflow PIP package from tensorflow sources:
+
+* configure variables:
+  * tensorflow_source_path defaults to ~/src/tensorflow
+* ansible-playbook tensorflow-build.yml -l localhost --ask-sudo
+* cd ~/src/tensorflow
+* ./configure
+* bazel build --config=opt //tensorflow/tools/pip_package:build_pip_package
+* bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
+* sudo pip3 install /tmp/tensorflow_pkg/tensorflow-1.4.0rc1-cp35-cp35m-linux_x86_64.whl
