@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+
+  vars:
+    tensorflow_source_branch: "r1.3"
+
+  roles:
+    - install-tensorflow-virtualenv
+    - tensorflow-sources
